@@ -154,7 +154,7 @@ nav ul .order-now {
   width: 100%;
 }
 .contact-us .contact-body {
-  padding: 15px 25px;
+  padding: 30px 45px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -163,12 +163,15 @@ nav ul .order-now {
   margin-bottom: 25px;
 }
 .contact-us .contact-body .title {
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
-.contact-us .contact-body hr {
-  width: 100%;
-  margin-top: auto;
+.contact-us .contact-body .timings .day {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
