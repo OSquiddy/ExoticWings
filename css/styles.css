@@ -136,6 +136,26 @@ nav ul .order-now {
   padding: 0 5px 10px;
 }
 
+.top-views {
+  margin: 15px 0 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-views .top-views-title {
+  margin-bottom: 5px;
+  font-size: 44px;
+  font-weight: 700;
+}
+.top-views .top-views-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  gap: 20px;
+}
+
 .contact-us {
   margin: 15px 0 50px;
 }
