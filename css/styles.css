@@ -1030,10 +1030,16 @@ nav.open ul li {
   }
   .contact-us .col {
     display: flex;
+    height: 100%;
     width: 50%;
-    flex-direction: row;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .contact-us .map {
+    height: auto;
   }
   .contact-us .map iframe {
+    height: 100%;
     width: 100%;
   }
   .contact-us .contact-body {
