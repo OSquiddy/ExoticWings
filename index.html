@@ -7,25 +7,32 @@
     <title>Exotic Wings & Things</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/e46601e7fc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav>
+        <button id="close" class="mobile"><i class="fa-solid fa-close"></i></button>
         <div class="container">
-            <div class="logo-container">
+            <button id="menu-toggle" class="mobile">
+                <i class="fa-solid fa-bars open"></i>
+            </button>
+            <!-- <div class="logo-container">
                 <img src="img/logo.png" alt="logo">
-            </div>
+            </div> -->
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/pdf/menu.pdf" target="_blank">Menu</a></li>
-                <li><a href="/about.html">About Us</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
-                <li class="order-now"><a
-                        href="https://www.doordash.com/store/exotic-wings-and-things-birmingham-941992/1371826/?srsltid=AfmBOoptsnv4exNi5KyoqRnBgTF-4ppLXFN80zGcA0JcEvI13zmIi9Ji">Order
+                <li><a href="/pdf/menu_merged.pdf" target="_blank">Menu</a></li>
+                <!-- <li><a href="/about.html">About Us</a></li> -->
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li class="order-now desktop"><a
+                        href="https://www.doordash.com/store/exotic-wings-birmingham-1529250/2060952/?srsltid=AfmBOoo68-1-eZAkhy_3fXTiAMV-V36EFr_kBUQE7CkfltzQPGIvWAZj">Order
                         Now</a></li>
             </ul>
         </div>
@@ -40,7 +47,7 @@
             <div class="row">
                 <div class="col">
                     <h2>HALAL</h2>
-                    <p>All of our meats are halal, except ...</p>
+                    <p>All of our meats are halal</p>
                 </div>
                 <div class="col">
                     <img src="img/halal.webp" alt="halal-symbol">
@@ -56,16 +63,16 @@
                 <div class="tagline">Treat yourself to our must try list that has everyone talking</div>
 
                 <button>
-                    <a href="pdf/menu.pdf" target="_blank"><span>View Full Menu</span></a>
+                    <a href="pdf/menu_merged.pdf" target="_blank"><span>View Full Menu</span></a>
                 </button>
             </div>
 
             <div class="top-items-body">
-                <div class="item-list-container">
+                <div class="item-list-container swiper">
                     <i class="fa-solid fa-circle-chevron-left" id="carousel-left"></i>
                     <i class="fa-solid fa-circle-chevron-right" id="carousel-right"></i>
-                    <div class="item-list">
-                        <div class="item">
+                    <div class="item-list swiper-wrapper">
+                        <div class="item swiper-slide">
                             <div class="bg-blur">
                                 <img src="img/10-wings-combo.jpg" alt="10-wings-combo">
                                 <div class="name">10 Wings Combo</div>
@@ -73,7 +80,7 @@
                                     some fries</div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item swiper-slide">
                             <div class="bg-blur">
                                 <img src="img/beef-quesedilla.jpg" alt="beef-quesedilla">
                                 <div class="name">Beef Quesedillas</div>
@@ -81,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item swiper-slide">
                             <div class="bg-blur">
                                 <img src="img/chicken-fried-loaded-fries.jpg" alt="chicken-fried-loaded-fries">
                                 <div class="name">Chicken Fried Loaded fries</div>
@@ -89,7 +96,7 @@
                                     Accompanied by either ranch or bbq sauce</div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item swiper-slide">
                             <div class="bg-blur">
                                 <img src="img/shrimp-big-potato.jpg" alt="shrimp-big-potato">
                                 <div class="name">Shrimp Big Potato</div>
@@ -97,7 +104,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item swiper-slide">
                             <div class="bg-blur">
                                 <img src="img/taco.jpg" alt="taco">
                                 <div class="name">Tacos</div>
@@ -105,6 +112,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
                 </div>
             </div>
         </div>
@@ -161,9 +172,7 @@
             <div class="row">
                 <div class="col">
                     <div class="title mobile">Our Desserts</div>
-                </div>
-                <div class="col">
-                    <img src="img/exotic_21.jpg" alt="">
+                    <img src="img/exotic_22.jpg" alt="">
                 </div>
                 <div class="col">
                     <div class="title desktop">Our Desserts</div>
@@ -182,12 +191,51 @@
             </div>
         </div>
     </section>
-    <section class="reviews">
-        <div class="container"></div>
-    </section>
-    <section class="contact-us">
+    <section class="faq" id="faq">
         <div class="container">
-
+            <div class="title">Frequently asked questions</div>
+            <details class="faq-item">
+                <summary class="question">
+                    What are you known for?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="answer">
+                    We are known for our delicious wings, tacos, burgers and sandwiches.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="question">
+                    Do you offer delivery or takeout?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="answer">
+                    Yes, we offer delivery and takeout.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="question">
+                    Is there seating arrangement for a large group?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="answer">
+                    Unfortunately, we can only seat about 5-6 people comfortably.
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary class="question">
+                    Do you serve any pork items?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </summary>
+                <div class="answer">
+                    No, we do not. Chicken, beef and turkey only.
+                </div>
+            </details>
+        </div>
+    </section>
+    <section class="contact-us" id="contact-us">
+        <div class="container">
+            
+            <div class="location-details">Our Location</div>
             <div class="row">
                 <div class="col map">
                     <iframe
@@ -221,11 +269,15 @@
             </div>
         </div>
     </section>
-    <footer>
-
-    </footer>
+    <div class="mobile order-now-container">
+        <a
+            href="https://www.doordash.com/store/exotic-wings-birmingham-1529250/2060952/?srsltid=AfmBOoo68-1-eZAkhy_3fXTiAMV-V36EFr_kBUQE7CkfltzQPGIvWAZj">
+            <button class="order-button">Order Now <span><i class="fa-solid fa-chevron-right"></i></span></button>
+        </a>
+    </div>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="./js/script.js" defer></script>
 
 </html>
